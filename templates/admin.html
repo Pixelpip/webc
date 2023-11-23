@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #aaa;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        li:hover {
+            background-color: #f9f9f9;
+        }
+
+        br {
+            display: none;
+        }
+
+        li:hover br {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Admin Page</h1>
+
+    <h2>Arrived Participants</h2>
+    <ul>
+        {% for participant in arrived_participants %}
+        <li>
+            {{ participant.name }} - {{ participant.department }}
+            {% if participant.registration_info %}
+            <br>Registration Info: {{ participant.registration_info }}
+            {% endif %}
+            {% if participant.qr_code %}
+            <br>QR Code: {{ participant.qr_code }}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Yet to Arrive Participants</h2>
+    <ul>
+        {% for participant in pending_participants %}
+        <li>
+            {{ participant.name }} - {{ participant.department }}
+            {% if participant.registration_info %}
+            <br>Registration Info: {{ participant.registration_info }}
+            {% endif %}
+            {% if participant.qr_code %}
+            <br>QR Code: {{ participant.qr_code }}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>

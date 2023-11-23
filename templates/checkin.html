@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in Page</title>
+    <!-- You can link to a CSS file for styling if needed -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+</head>
+
+<body>
+
+    <h1>Check-in Page</h1>
+
+    <p>Participant: {{ participant.name }}</p>
+    <p>Department: {{ participant.department }}</p>
+
+    <form method="POST" action="{{ url_for('checkin', participant_id=participant.id) }}">
+        <label for="payment">Payment:</label>
+        <input type="checkbox" id="payment" name="payment">
+        <br>
+        <button type="submit">Check In</button>
+    </form>
+
+</body>
+
+</html>

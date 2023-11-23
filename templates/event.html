@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/event.css') }}">
+</head>
+<body>
+    <main>
+        <ul class='slider'>
+          <li class='item' style="background-image: url('{{ url_for('static', filename='images/agam.jpg') }}')">
+            <div class='content'>
+              <h2 class='title'>Concert</h2>
+              <p class='description'> Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim.  </p>
+              <a href="{{ url_for('register') }}"><button>Click to Register</button></a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('{{ url_for('static', filename='images/robot.jpg') }}')">
+            <div class='content'>
+              <h2 class='title'>Robot Fight</h2>
+              <p class='description'> Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim.  </p>
+              <a href="{{ url_for('register') }}"><button>Click to Register</button></a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('{{ url_for('static', filename='images/sing.jpg') }}')">
+            <div class='content'>
+              <h2 class='title'>Singing</h2>
+              <p class='description'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+              </p>
+              <a href="{{ url_for('register') }}"><button>Click to Register</button></a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('{{ url_for('static', filename='images/code.jpg') }}')">
+            <div class='content'>
+              <h2 class='title'>Hackathon</h2>
+              <p class='description'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+              </p>
+              <a href="{{ url_for('register') }}"><button>Click to Register</button></a>
+            </div>
+          </li>
+          <li class='item' style="background-image: url('{{ url_for('static', filename='images/dance.jpg') }}')">
+            <div class='content'>
+              <h2 class='title'>Dance</h2>
+              <p class='description'> Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim.  </p>
+              <a href="{{ url_for('register') }}"><button>Click to Register</button></a>
+            </div>
+          </li>
+        </ul>
+        <nav class='nav'>
+          <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+          <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        </nav>
+      </main>
+      
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script>
+        const slider = document.querySelector('.slider');
+
+function activate(e) {
+  const items = document.querySelectorAll('.item');
+  e.target.matches('.next') && slider.append(items[0])
+  e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+}
+
+document.addEventListener('click',activate,false);
+      </script>
+</body>
+</html>

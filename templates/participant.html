@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participants Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/participant.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+   
+
+    <h1>Participants List</h1>
+   
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>QR Code</th>
+                <th>Checked In</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for participant in participants %}
+            <tr>
+                <td>{{ participant.name }}</td>
+                <td>{{ participant.department }}</td>
+                <td><a href="{{ participant.qr_code }}" target="_blank">Scan QR Code</a></td>
+                <td>{% if participant.checked_in %} Yes {% else %} No {% endif %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+   
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, #12181b 50%, #202737 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #b8c9d5;
+    /* Light Gray */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.break {
+    margin: 20px;
+}
+
+/* Button Start */
+button {
+    width: 120px;
+    /* Slightly wider */
+    padding: 12px 20px;
+    /* Adjusted padding */
+    text-align: center;
+    color: #111;
+    /* Dark Black */
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.b1 {
+    background-color: transparent;
+    border: 3px solid #00d77d;
+    /* Bright Green */
+    border-radius: 50px;
+    transition: all .15s ease-in-out;
+    color: #00d77d;
+    /* Bright Green */
+}
+
+.b1:hover {
+    box-shadow: 0 0 10px 0 #00d796 inset, 0 0 20px 2px #00d785;
+    border: 3px solid #00d785;
+    /* Slightly darker green on hover */
+}
+
+/* Button End */
+
+/* Additional Styles for the Second Code */
+
+h1 {
+    color: #ccc;
+    /* Light Gray */
+}
+
+form {
+    background-color: #111;
+    /* Dark Black */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Darker shadow */
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b8c9d5;
+    /* Light Gray */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    /* Slightly smaller padding */
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    /* Dark Gray */
+    border-radius: 4px;
+    background-color: #333;
+    /* Dark Gray */
+    color: #ccc;
+    /* Light Gray */
+}
+
+button {
+    background-color: #333;
+    /* Dark Gray */
+    color: #fff;
+    /* White */
+    padding: 14px 24px;
+    /* Adjusted padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #222;
+    /* Slightly darker gray on hover */
+}
