@@ -1,6 +1,6 @@
 # webc
 
-#Steps to run the App
+Steps to run the App
 
 1.Initalize a python virtual environment(varies based on OS)
 
